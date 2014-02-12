@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UltimateWordamentSolverLib.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimInputSquare">
+            <summary>Shim type of UltimateWordamentSolverLib.InputSquare</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimInputSquare.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimInputSquare.#ctor(UltimateWordamentSolverLib.InputSquare)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimInputSquare.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimInputSquare.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.Constructor">
+            <summary>Sets the shim of InputSquare.InputSquare()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.ConstructorInputSquare">
+            <summary>Sets the shim of InputSquare.InputSquare(InputSquare inSq)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.IsHighPriorityGet">
+            <summary>Sets the shim of InputSquare.get_IsHighPriority()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.IsHighPrioritySetBoolean">
+            <summary>Sets the shim of InputSquare.set_IsHighPriority(Boolean value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.IsOrGet">
+            <summary>Sets the shim of InputSquare.get_IsOr()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.IsOrSetBoolean">
+            <summary>Sets the shim of InputSquare.set_IsOr(Boolean value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.Letters2Get">
+            <summary>Sets the shim of InputSquare.get_Letters2()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.Letters2SetString">
+            <summary>Sets the shim of InputSquare.set_Letters2(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.LettersGet">
+            <summary>Sets the shim of InputSquare.get_Letters()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.LettersSetString">
+            <summary>Sets the shim of InputSquare.set_Letters(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.PositionGet">
+            <summary>Sets the shim of InputSquare.get_Position()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.PositionSetInputSquarePositionType">
+            <summary>Sets the shim of InputSquare.set_Position(PositionType value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.ToString">
+            <summary>Sets the shim of InputSquare.ToString()</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.IsHighPriorityGet">
+            <summary>Sets the shim of InputSquare.get_IsHighPriority()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.IsHighPrioritySetBoolean">
+            <summary>Sets the shim of InputSquare.set_IsHighPriority(Boolean value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.IsOrGet">
+            <summary>Sets the shim of InputSquare.get_IsOr()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.IsOrSetBoolean">
+            <summary>Sets the shim of InputSquare.set_IsOr(Boolean value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.Letters2Get">
+            <summary>Sets the shim of InputSquare.get_Letters2()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.Letters2SetString">
+            <summary>Sets the shim of InputSquare.set_Letters2(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.LettersGet">
+            <summary>Sets the shim of InputSquare.get_Letters()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.LettersSetString">
+            <summary>Sets the shim of InputSquare.set_Letters(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.PositionGet">
+            <summary>Sets the shim of InputSquare.get_Position()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.PositionSetInputSquarePositionType">
+            <summary>Sets the shim of InputSquare.set_Position(PositionType value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimInputSquare.AllInstances.ToString01">
+            <summary>Sets the shim of InputSquare.ToString()</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimOutputSquare">
+            <summary>Shim type of UltimateWordamentSolverLib.OutputSquare</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.#ctor(UltimateWordamentSolverLib.OutputSquare)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.ColumnGet">
+            <summary>Sets the shim of OutputSquare.get_Column()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.ColumnSetInt32">
+            <summary>Sets the shim of OutputSquare.set_Column(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.Constructor">
+            <summary>Sets the shim of OutputSquare.OutputSquare()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.InSquareGet">
+            <summary>Sets the shim of OutputSquare.get_InSquare()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.InSquareSetInputSquare">
+            <summary>Sets the shim of OutputSquare.set_InSquare(InputSquare value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.LettersGet">
+            <summary>Sets the shim of OutputSquare.get_Letters()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.LettersSetString">
+            <summary>Sets the shim of OutputSquare.set_Letters(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.PointsGet">
+            <summary>Sets the shim of OutputSquare.get_Points()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.PointsSetInt32">
+            <summary>Sets the shim of OutputSquare.set_Points(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.RowGet">
+            <summary>Sets the shim of OutputSquare.get_Row()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.RowSetInt32">
+            <summary>Sets the shim of OutputSquare.set_Row(Int32 value)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.ColumnGet">
+            <summary>Sets the shim of OutputSquare.get_Column()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.ColumnSetInt32">
+            <summary>Sets the shim of OutputSquare.set_Column(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.InSquareGet">
+            <summary>Sets the shim of OutputSquare.get_InSquare()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.InSquareSetInputSquare">
+            <summary>Sets the shim of OutputSquare.set_InSquare(InputSquare value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.LettersGet">
+            <summary>Sets the shim of OutputSquare.get_Letters()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.LettersSetString">
+            <summary>Sets the shim of OutputSquare.set_Letters(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.PointsGet">
+            <summary>Sets the shim of OutputSquare.get_Points()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.PointsSetInt32">
+            <summary>Sets the shim of OutputSquare.set_Points(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.RowGet">
+            <summary>Sets the shim of OutputSquare.get_Row()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimOutputSquare.AllInstances.RowSetInt32">
+            <summary>Sets the shim of OutputSquare.set_Row(Int32 value)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimWord">
+            <summary>Shim type of UltimateWordamentSolverLib.Word</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWord.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWord.#ctor(UltimateWordamentSolverLib.Word)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWord.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWord.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.Constructor">
+            <summary>Sets the shim of Word.Word()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.PointsGet">
+            <summary>Sets the shim of Word.get_Points()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.PointsSetInt32">
+            <summary>Sets the shim of Word.set_Points(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.SourceGet">
+            <summary>Sets the shim of Word.get_Source()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.SourceSetIEnumerableOfOutputSquare">
+            <summary>Sets the shim of Word.set_Source(IEnumerable`1&lt;OutputSquare&gt; value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.WordStringGet">
+            <summary>Sets the shim of Word.get_WordString()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.WordStringSetString">
+            <summary>Sets the shim of Word.set_WordString(String value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord._set_Sourceb__0OutputSquare">
+            <summary>Sets the shim of Word.&lt;set_Source&gt;b__0(OutputSquare i)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord._set_Sourceb__1StringBuilderOutputSquare">
+            <summary>Sets the shim of Word.&lt;set_Source&gt;b__1(StringBuilder acc, OutputSquare sq)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord._set_Sourceb__2StringBuilder">
+            <summary>Sets the shim of Word.&lt;set_Source&gt;b__2(StringBuilder sq)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances.PointsGet">
+            <summary>Sets the shim of Word.get_Points()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances.PointsSetInt32">
+            <summary>Sets the shim of Word.set_Points(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances.SourceGet">
+            <summary>Sets the shim of Word.get_Source()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances.SourceSetIEnumerableOfOutputSquare">
+            <summary>Sets the shim of Word.set_Source(IEnumerable`1&lt;OutputSquare&gt; value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances.WordStringGet">
+            <summary>Sets the shim of Word.get_WordString()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWord.AllInstances.WordStringSetString">
+            <summary>Sets the shim of Word.set_WordString(String value)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimWordamentSolver">
+            <summary>Shim type of UltimateWordamentSolverLib.WordamentSolver</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWordamentSolver.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWordamentSolver.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWordamentSolver.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWordamentSolver.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWordamentSolver.SolveIWordamentSolverString">
+            <summary>Sets the shim of WordamentSolver.Solve(IWordamentSolver solver, String inString)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimWordamentUtils">
+            <summary>Shim type of UltimateWordamentSolverLib.WordamentUtils</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWordamentUtils.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWordamentUtils.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimWordamentUtils.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWordamentUtils.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimWordamentUtils.CombineIEnumerableOfWordIEnumerableOfWordWordSolutionOrder">
+            <summary>Sets the shim of WordamentUtils.Combine(IEnumerable`1&lt;Word&gt; sortedWords1, IEnumerable`1&lt;Word&gt; sortedWords2, WordSolutionOrder order)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver">
+            <summary>Shim type of UltimateWordamentSolverLib.Xbox360WebWordamentSolver</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.#ctor(UltimateWordamentSolverLib.Xbox360WebWordamentSolver)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.Bind(UltimateWordamentSolverLib.IWordamentSolver)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.Constructor">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.Xbox360WebWordamentSolver()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.GenerateWebRequestIEnumerableOfInputSquare">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.GenerateWebRequest(IEnumerable`1&lt;InputSquare&gt; squares)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.GetWebResponsesWebRequestWebRequestWebResponseOutWebResponseOut">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.GetWebResponses(WebRequest webReq1, WebRequest webReq2, WebResponse&amp; webRes1, WebResponse&amp; webRes2)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.MinLengthGet">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.get_MinLength()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.MinLengthSetInt32">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.set_MinLength(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.MinPointsGet">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.get_MinPoints()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.MinPointsSetInt32">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.set_MinPoints(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.ParseResponseIEnumerableOfInputSquareWebResponse">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.ParseResponse(IEnumerable`1&lt;InputSquare&gt; squares, WebResponse webRes)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.SolveIEnumerableOfInputSquare">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.Solve(IEnumerable`1&lt;InputSquare&gt; squares)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.SortOrderGet">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.get_SortOrder()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.SortOrderSetWordSolutionOrder">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.set_SortOrder(WordSolutionOrder value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver._Solveb__2InputSquare">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.&lt;Solve&gt;b__2(InputSquare sq)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.GenerateWebRequestIEnumerableOfInputSquare">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.GenerateWebRequest(IEnumerable`1&lt;InputSquare&gt; squares)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.GetWebResponsesWebRequestWebRequestWebResponseOutWebResponseOut">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.GetWebResponses(WebRequest webReq1, WebRequest webReq2, WebResponse&amp; webRes1, WebResponse&amp; webRes2)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.MinLengthGet">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.get_MinLength()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.MinLengthSetInt32">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.set_MinLength(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.MinPointsGet">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.get_MinPoints()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.MinPointsSetInt32">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.set_MinPoints(Int32 value)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.ParseResponseIEnumerableOfInputSquareWebResponse">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.ParseResponse(IEnumerable`1&lt;InputSquare&gt; squares, WebResponse webRes)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.SolveIEnumerableOfInputSquare">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.Solve(IEnumerable`1&lt;InputSquare&gt; squares)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.SortOrderGet">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.get_SortOrder()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.ShimXbox360WebWordamentSolver.AllInstances.SortOrderSetWordSolutionOrder">
+            <summary>Sets the shim of Xbox360WebWordamentSolver.set_SortOrder(WordSolutionOrder value)</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver">
+            <summary>Stub type of UltimateWordamentSolverLib.IWordamentSolver</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.#ctor">
+            <summary>Initializes a new instance of type StubIWordamentSolver</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.AttachBackingFieldToMinLength">
+            <summary>Attaches delegates to emulate StubIWordamentSolver.MinLength as a property with a backing field.</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.AttachBackingFieldToMinPoints">
+            <summary>Attaches delegates to emulate StubIWordamentSolver.MinPoints as a property with a backing field.</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.AttachBackingFieldToSortOrder">
+            <summary>Attaches delegates to emulate StubIWordamentSolver.SortOrder as a property with a backing field.</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.MinLengthGet">
+            <summary>Sets the stub of IWordamentSolver.get_MinLength()</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.MinLengthSetInt32">
+            <summary>Sets the stub of IWordamentSolver.set_MinLength(Int32 value)</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.MinPointsGet">
+            <summary>Sets the stub of IWordamentSolver.get_MinPoints()</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.MinPointsSetInt32">
+            <summary>Sets the stub of IWordamentSolver.set_MinPoints(Int32 value)</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.SolveIEnumerableOfInputSquare">
+            <summary>Sets the stub of IWordamentSolver.Solve(IEnumerable`1&lt;InputSquare&gt; squares)</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.SortOrderGet">
+            <summary>Sets the stub of IWordamentSolver.get_SortOrder()</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.SortOrderSetWordSolutionOrder">
+            <summary>Sets the stub of IWordamentSolver.set_SortOrder(WordSolutionOrder value)</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.uwsl::UltimateWordamentSolverLib#IWordamentSolver#Solve(System.Collections.Generic.IEnumerable{UltimateWordamentSolverLib.InputSquare})">
+            <summary>Sets the stub of IWordamentSolver.Solve(IEnumerable`1&lt;InputSquare&gt; squares)</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.uwsl::UltimateWordamentSolverLib#IWordamentSolver#MinLength">
+            <summary>Sets the stub of IWordamentSolver.get_MinLength()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.uwsl::UltimateWordamentSolverLib#IWordamentSolver#MinPoints">
+            <summary>Sets the stub of IWordamentSolver.get_MinPoints()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubIWordamentSolver.uwsl::UltimateWordamentSolverLib#IWordamentSolver#SortOrder">
+            <summary>Sets the stub of IWordamentSolver.get_SortOrder()</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.StubInputSquare">
+            <summary>Stub type of UltimateWordamentSolverLib.InputSquare</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubInputSquare.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubInputSquare.#ctor(UltimateWordamentSolverLib.InputSquare)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubInputSquare.InitializeStub">
+            <summary>Initializes a new instance of type StubInputSquare</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubInputSquare.ToString">
+            <summary>Sets the stub of InputSquare.ToString()</summary>
+        </member>
+        <member name="F:UltimateWordamentSolverLib.Fakes.StubInputSquare.ToString01">
+            <summary>Sets the stub of InputSquare.ToString()</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubInputSquare.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubInputSquare.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubInputSquare.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.StubOutputSquare">
+            <summary>Stub type of UltimateWordamentSolverLib.OutputSquare</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubOutputSquare.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubOutputSquare.InitializeStub">
+            <summary>Initializes a new instance of type StubOutputSquare</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubOutputSquare.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubOutputSquare.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubOutputSquare.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.StubWord">
+            <summary>Stub type of UltimateWordamentSolverLib.Word</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubWord.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubWord.InitializeStub">
+            <summary>Initializes a new instance of type StubWord</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubWord.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubWord.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubWord.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:UltimateWordamentSolverLib.Fakes.StubXbox360WebWordamentSolver">
+            <summary>Stub type of UltimateWordamentSolverLib.Xbox360WebWordamentSolver</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubXbox360WebWordamentSolver.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:UltimateWordamentSolverLib.Fakes.StubXbox360WebWordamentSolver.InitializeStub">
+            <summary>Initializes a new instance of type StubXbox360WebWordamentSolver</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubXbox360WebWordamentSolver.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubXbox360WebWordamentSolver.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:UltimateWordamentSolverLib.Fakes.StubXbox360WebWordamentSolver.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
