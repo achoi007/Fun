@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace UltimateWordamentSolverLib
 {
@@ -98,6 +101,7 @@ namespace UltimateWordamentSolverLib
         private void GetWebResponses(WebRequest webReq1, WebRequest webReq2, out WebResponse webRes1, out WebResponse webRes2)
         {
             throw new NotImplementedException();
+
         }
 
         private IEnumerable<Word> ParseResponse(IEnumerable<InputSquare> squares, WebResponse webRes)
@@ -107,7 +111,78 @@ namespace UltimateWordamentSolverLib
 
         private WebRequest GenerateWebRequest(IEnumerable<InputSquare> squares)
         {
-            throw new NotImplementedException();
+            Uri uri = GenerateUri(squares);
+            return WebRequest.Create(uri);
+        }
+
+        /// http://dev.360surface.net/Wordament/EnterBoard.aspx?BoardID=p0g0e0d0l0l0d0st0c0f0i0e0s0h0o0n0&Length=3&Lang=English&Sort=by%20points&Show=not%20showing
+        private Uri GenerateUri(IEnumerable<InputSquare> squares)
+        {
+            NameValueCollection queryParams = new NameValueCollection();
+
+            // Add board id
+            var letters = squares.Select(sq => sq.Letters).ToArray();
+            queryParams.Add("BoardID", string.Join("0", letters));
+
+            // Add length
+            queryParams.Add("Length", MinLength.ToString());
+
+            // Add English as default language
+            string language = ConfigurationManager.AppSettings["Language"] ?? "English";
+            queryParams.Add("Lang", language);
+
+            // Sort order
+            string byOrder;
+            switch (SortOrder)
+            {
+                case WordSolutionOrder.Score:
+                    byOrder = "points";
+                    break;
+                case WordSolutionOrder.Length:
+                    byOrder = "length";
+                    break;
+                case WordSolutionOrder.Alphabetically:
+                    byOrder = "alphabets";
+                    break;
+                default:
+                    byOrder = "points";
+                    break;
+            }
+            queryParams.Add("Sort", "by " + byOrder);
+
+            // Showing
+            queryParams.Add("Show", "showing");
+
+            // URL part
+            string url = ConfigurationManager.AppSettings["URL"] ?? "http://dev.360surface.net/Wordament/EnterBoard.aspx";
+
+            // Add URL part 
+
+            StringBuilder uriBuilder = new StringBuilder();
+            uriBuilder.Append(url);
+            uriBuilder.Append("?");
+
+            // Add query params part
+
+            int numParams = queryParams.Count;
+            for (int i = 0; i < numParams; i++)
+            {
+                // Add key and value
+                string key = HttpUtility.HtmlEncode(queryParams.GetKey(i));
+                string value = HttpUtility.HtmlEncode(queryParams.Get(i));
+                uriBuilder.Append(key);
+                uriBuilder.Append("=");
+                uriBuilder.Append(value);
+                
+                // Add separator if not the last query param
+                if (i != numParams - 1)
+                {
+                    uriBuilder.Append("&");
+                }
+            }
+
+            // Return url
+            return new Uri(uriBuilder.ToString());
         }
 
     }
