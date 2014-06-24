@@ -1,3 +1,4 @@
+import random
 import TwentyFortyEight
 
 class TwentyFortyEightPlayer:
@@ -5,8 +6,15 @@ class TwentyFortyEightPlayer:
     def __init__(self):
         pass
 
+    def _new_tile_func():
+        rnd = random.randrange(1, 101)
+        if rnd <= 90:
+            return 2
+        else:
+            return 4
+
     def run(self):
-        self.game = TwentyFortyEight(4, 4)
+        self.game = TwentyFortyEight(4, 4, _new_tile_func)
         game = self.game
         # Read command and process it
         cmd = input("(u)p, (l)eft, (r)ight, (d)own, (R)eset, (S)ize")
@@ -24,7 +32,7 @@ class TwentyFortyEightPlayer:
         elif cmd == "S":
             width = input("New width")
             height = input("New height")
-            game = TwentyFortyEight(height, width)
+            game = TwentyFortyEight(width, height)
         else:
             print("Unknown command: ", cmd)
         # Print out current game
