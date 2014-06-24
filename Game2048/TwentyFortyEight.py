@@ -21,11 +21,13 @@ class TwentyFortyEight:
         self._new_tile_func = new_tile_func
         self.reset()
 
+
     def reset(self):
         '''
         Reset all tiles to empty
         '''
         self._tiles = np.zeros((self._height, self._width), int)
+
 
     def get_width(self):
         '''
@@ -33,11 +35,13 @@ class TwentyFortyEight:
         '''
         return self._width
 
+
     def get_height(self):
         '''
         Get height (number of rows)
         '''
         return self._height
+
 
     def move(self, direction):
         '''
@@ -72,31 +76,63 @@ class TwentyFortyEight:
                 zero_index = zero_indexes[randint(0, len(zero_indexes)-1)]
                 tile[zero_index[0], zero_index[1]] = t
 
+
     def get_tile(self, row, col):
         '''
         Get tile at given coordinate
         '''
         return self._tiles[row, col]
 
+
     def set_tile(self, row, col, tile):
         '''
         Set tile at given coordinate
         '''
+
         self._tiles[row, col] = tile
 
     def is_won(self):
-        pass
+        '''
+        Return true if game is won - any tile that has 2048
+        '''
+        return np.any(self._tiles == 2048)
+
 
     def is_lost(self):
-        pass
+        '''
+        Return true if game is lost - all tiles occupied and no merge is
+        possible.
+        '''
+        # If at least 1 non empty tile, not lost
+        if np.any(self._tiles != 0):
+            return False
+        # For each row, check tile[n] and tile[n+1] are different
+        for row in self._get_rows():
+            if self._has_same_elem(row):
+                return False
+        # For each column, check tile[n] and tile[n+1] are different
+        for col in self._get_cols():
+            if self._has_same_elem(col):
+                return False
+        # No empty, no same element between adjacent cell, game is lost
+        return True
+
+    def _has_same_elem(self, v):
+        for i in range(len(v) - 1):
+            if v[i] == v[i+1]:
+                return True
+        return False
+
 
     def _get_rows(self):
         tiles = self._tiles
         return [tiles[r, :] for r in range(self._height)]
 
+
     def _get_cols(self):
         tiles = self._tiles
         return [tiles[:, c] for c in range(self._width)]
+
 
     def _create_empty_tiles(self):
         return np.empty((self._height, self._width), int)
@@ -107,19 +143,23 @@ class TwentyFortyEight:
             new_tiles[i, :] = np.array(row)
         self._cmp_and_set(new_tiles)
 
+
     def _set_cols(self, cols):
         new_tiles = self._create_empty_tiles()
         for i,col in enumerate(cols):
             new_tiles[:, i] = np.array(col)
         self._cmp_and_set(new_tiles)
 
+
     def _cmp_and_set(self, tiles):
         old_tiles = self._tiles
         self._tiles = tiles
         self._is_changed = not((old_tiles == tiles).all())
 
+
     def _reverse(self, arr):
         return arr[::-1]
+
 
     def _merge(self, arr):
         # Remove all 0 from array.  Done if nothing is left
@@ -135,6 +175,7 @@ class TwentyFortyEight:
         new_array = np.array(res, int)
         return new_array
 
+
     def _merge_helper(self, before, after, is_merged):
         # Recursive function to merge tiles in after into before
         if len(after) == 0:
@@ -148,6 +189,7 @@ class TwentyFortyEight:
         else:
             before = before + [a]
             return self._merge_helper(before, after, False)
+
 
     def __str__(self):
         return str(self._tiles)
@@ -225,7 +267,33 @@ class TwentyFortyEightTest(unittest.TestCase):
     def test_new_tile(self):
         game = self.game
         game._new_tile_func = gen_uniq_tile
-        
+
+    def test_is_won(self):
+        game = self.game
+        self.assertEqual(False, game.is_won())
+        game.set_tile(3, 3, 2048)
+        self.assertEqual(True, game.is_won())
+
+    def test_is_lost(self):
+        game = self.game
+        self.assertEqual(False, game.is_lost())
+        tile = 1
+        # Fill out all tiles with different number
+        for row in game.get_height():
+            for col in game.get_width():
+                game.set_tile(row, col, tile)
+                tile += 1
+        self.assertEqual(True, game.is_lost())
+        # Make 2 tiles on same row same number
+        orig_tile = game.get_tile(1, 2)
+        game.set_tile(1, 2, game.get_tile(1, 1))
+        self.assertEqual(False, game.is_lost())
+        game.set_tile(1, 2, orig_tile)
+        self.assertEqual(True, game.is_lost())
+        # Make 2 tiles on same column same number
+        orig_tile = game.get_tile(3, 4)
+        game.set_tile(3, 4, game.get_tile(4, 4))
+        self.assertEqual(False, game.is_lost())
         
 
 if __name__ == '__main__':
