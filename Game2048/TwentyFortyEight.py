@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import unittest
 from random import randint
 
@@ -137,6 +138,7 @@ class TwentyFortyEight:
     def _create_empty_tiles(self):
         return np.empty((self._height, self._width), int)
 
+
     def _set_rows(self, rows):
         new_tiles = self._create_empty_tiles()
         for i,row in enumerate(rows):
@@ -148,7 +150,7 @@ class TwentyFortyEight:
         new_tiles = self._create_empty_tiles()
         for i,col in enumerate(cols):
             new_tiles[:, i] = np.array(col)
-        self._cmp_and_set(new_tiles)
+        self._cmp_and_set(new_tiles)            
 
 
     def _cmp_and_set(self, tiles):
@@ -207,7 +209,6 @@ class TwentyFortyEightTest(unittest.TestCase):
         game.set_tile(2, 2, 8)
         game.set_tile(2, 3, 16)
         self.game = game
-        self.next_tile = 1
 
     def test_setup(self):
         game = self.game
@@ -258,29 +259,35 @@ class TwentyFortyEightTest(unittest.TestCase):
         self.assertEqual(8, game.get_tile(1, 3))
         self.assertEqual(16, game.get_tile(2, 3))
 
-    def gen_uniq_tile(self):
-        # A function to generate unique tile
-        tile = self.next_tile
-        self.next_tile += 1
-        return tile
-
     def test_new_tile(self):
-        game = self.game
-        game._new_tile_func = gen_uniq_tile
+        def double_tile():
+            if not hasattr(double_tile, "count"):
+                double_tile.count = 1
+            double_tile.count *= 2
+            print "returning", double_tile.count
+            return double_tile.count
+        game = TwentyFortyEight(4, 4, double_tile)
+        for _ in range(int(math.log(2048, 2)) + 1):
+            self.assertFalse(game.is_won())            
+            game.move(TwentyFortyEight.RIGHT)
+            print game
+        self.assertTrue(game.is_won())
+
+        
 
     def test_is_won(self):
         game = self.game
-        self.assertEqual(False, game.is_won())
+        self.assertFalse(game.is_won())
         game.set_tile(3, 3, 2048)
-        self.assertEqual(True, game.is_won())
+        self.assertTrue(game.is_won())
 
     def test_is_lost(self):
         game = self.game
         self.assertEqual(False, game.is_lost())
         tile = 1
         # Fill out all tiles with different number
-        for row in game.get_height():
-            for col in game.get_width():
+        for row in range(game.get_height()):
+            for col in range(game.get_width()):
                 game.set_tile(row, col, tile)
                 tile += 1
         self.assertEqual(True, game.is_lost())
