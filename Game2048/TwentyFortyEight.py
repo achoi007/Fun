@@ -29,6 +29,11 @@ class TwentyFortyEight:
         '''
         self._tiles = np.zeros((self._height, self._width), int)
 
+    def new_game(self):
+        self.reset()
+        self.add_random_tile()
+        self.add_random_tile()
+
 
     def get_width(self):
         '''
@@ -42,6 +47,19 @@ class TwentyFortyEight:
         Get height (number of rows)
         '''
         return self._height
+
+    def add_random_tile(self):
+        '''
+        Set a random empty tile to random tile number and return coordinate of new tile
+        '''
+        tile = self._new_tile_func()
+        if tile == 0:
+            return None
+        index = self._find_random_empty_tile()
+        if index == None:
+            return None
+        self.set_tile(index[0], index[1], tile)
+        return index
 
 
     def move(self, direction):
@@ -73,9 +91,16 @@ class TwentyFortyEight:
             if tile != 0:
                 tiles = self._tiles
                 # Pick a random empty position
-                zero_indexes = np.where(tiles == 0)
-                zero_index = zero_indexes[randint(0, len(zero_indexes)-1)]
-                tile[zero_index[0], zero_index[1]] = t
+                (row, col) = self._find_random_empty_tile()
+                tile[row, col] = t
+
+    def _find_random_empty_tile(self):
+        empties = np.where(self._tiles == 0)
+        empties_len = len(empties)
+        if empties_len == 0:
+            return None
+        else:
+            return empties[randint(0, empties_len - 1)]
 
 
     def get_tile(self, row, col):
@@ -262,17 +287,17 @@ class TwentyFortyEightTest(unittest.TestCase):
     def test_new_tile(self):
         def double_tile():
             if not hasattr(double_tile, "count"):
-                double_tile.count = 1
+                double_tile.count = 8
             double_tile.count *= 2
             print "returning", double_tile.count
             return double_tile.count
         game = TwentyFortyEight(4, 4, double_tile)
+        game.new_game()
         for _ in range(int(math.log(2048, 2)) + 1):
             self.assertFalse(game.is_won())            
             game.move(TwentyFortyEight.RIGHT)
             print game
         self.assertTrue(game.is_won())
-
         
 
     def test_is_won(self):
