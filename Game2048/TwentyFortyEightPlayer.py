@@ -1,50 +1,43 @@
 import random
-import TwentyFortyEight
+import TwentyFortyEight as tfe
 
 class TwentyFortyEightPlayer:
 
     def __init__(self):
         pass
 
-    def _new_tile_func():
-        rnd = random.randrange(1, 101)
-        if rnd <= 90:
-            return 2
-        else:
-            return 4
-
     def run(self):
-        self.game = TwentyFortyEight(4, 4, _new_tile_func)
+        width = int(raw_input("width: "))
+        height = int(raw_input("height: "))
+        self.game = tfe.TwentyFortyEight(width, height, tfe.standard_tile_func)
         game = self.game
-        # Read command and process it
-        cmd = input("(u)p, (l)eft, (r)ight, (d)own, (R)eset, (S)ize")
-        if cmd == "u":
-            game.move(TwentyFortyEight.UP)
-        elif cmd == "l":
-            game.move(TwentyFortyEight.UP)
-        elif cmd == "r":
-            game.move(TwentyFortyEight.UP)
-        elif cmd == "d":
-            game.move(TwentyFortyEight.UP)
-        elif cmd == "R":
-            print("Game is reset")
-            game.reset()
-        elif cmd == "S":
-            width = input("New width")
-            height = input("New height")
-            game = TwentyFortyEight(width, height)
-        else:
-            print("Unknown command: ", cmd)
+        game.new_game()
+        while not(game.is_won()) and not(game.is_lost()):
+            print game
+            # Read command and process it
+            cmd = raw_input("(u)p, (l)eft, (r)ight, (d)own, (N)ew Game: ")
+            if cmd == "u":
+                game.move(tfe.TwentyFortyEight.UP)
+            elif cmd == "l":
+                game.move(tfe.TwentyFortyEight.LEFT)
+            elif cmd == "r":
+                game.move(tfe.TwentyFortyEight.RIGHT)
+            elif cmd == "d":
+                game.move(tfe.TwentyFortyEight.DOWN)
+            elif cmd == "N":
+                game.reset()
+                game.new_game()
+            else:
+                print("Unknown command: ", cmd)
         # Print out current game
+        print game
         if game.is_won():
             print("Congrats, you have won the game")
         elif game.is_lost():
             print("Sorry, you have lost.")
-            game.reset()
-        print(game)
 
 if __name__ == '__main__':
-    player = TwnetyFortyEightPlayer()
+    player = TwentyFortyEightPlayer()
     player.run()
     
         

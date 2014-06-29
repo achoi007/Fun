@@ -1,7 +1,14 @@
 import numpy as np
 import math
 import unittest
-from random import randint
+import random
+
+def standard_tile_func(*args):
+    p = random.randrange(0, 100)
+    if p < 10:
+        return 4
+    else:
+        return 2
 
 class TwentyFortyEight:
     '''
@@ -92,15 +99,17 @@ class TwentyFortyEight:
                 tiles = self._tiles
                 # Pick a random empty position
                 (row, col) = self._find_random_empty_tile()
-                tile[row, col] = t
+                tiles[row, col] = tile
 
     def _find_random_empty_tile(self):
         empties = np.where(self._tiles == 0)
-        empties_len = len(empties)
+        empties_len = len(empties[0])
         if empties_len == 0:
             return None
         else:
-            return empties[randint(0, empties_len - 1)]
+            i = random.randrange(0, empties_len)
+            return (empties[0][i], empties[1][i])
+            
 
 
     def get_tile(self, row, col):
@@ -130,7 +139,7 @@ class TwentyFortyEight:
         possible.
         '''
         # If at least 1 non empty tile, not lost
-        if np.any(self._tiles != 0):
+        if np.any(self._tiles == 0):
             return False
         # For each row, check tile[n] and tile[n+1] are different
         for row in self._get_rows():
@@ -220,6 +229,9 @@ class TwentyFortyEight:
 
     def __str__(self):
         return str(self._tiles)
+
+
+
         
             
 class TwentyFortyEightTest(unittest.TestCase):
@@ -284,22 +296,6 @@ class TwentyFortyEightTest(unittest.TestCase):
         self.assertEqual(8, game.get_tile(1, 3))
         self.assertEqual(16, game.get_tile(2, 3))
 
-    def test_new_tile(self):
-        def double_tile():
-            if not hasattr(double_tile, "count"):
-                double_tile.count = 8
-            double_tile.count *= 2
-            print "returning", double_tile.count
-            return double_tile.count
-        game = TwentyFortyEight(4, 4, double_tile)
-        game.new_game()
-        for _ in range(int(math.log(2048, 2)) + 1):
-            self.assertFalse(game.is_won())            
-            game.move(TwentyFortyEight.RIGHT)
-            print game
-        self.assertTrue(game.is_won())
-        
-
     def test_is_won(self):
         game = self.game
         self.assertFalse(game.is_won())
@@ -308,24 +304,25 @@ class TwentyFortyEightTest(unittest.TestCase):
 
     def test_is_lost(self):
         game = self.game
-        self.assertEqual(False, game.is_lost())
+        game.reset()
+        self.assertFalse(game.is_lost())
         tile = 1
         # Fill out all tiles with different number
         for row in range(game.get_height()):
             for col in range(game.get_width()):
                 game.set_tile(row, col, tile)
                 tile += 1
-        self.assertEqual(True, game.is_lost())
+        self.assertTrue(game.is_lost())
         # Make 2 tiles on same row same number
         orig_tile = game.get_tile(1, 2)
         game.set_tile(1, 2, game.get_tile(1, 1))
-        self.assertEqual(False, game.is_lost())
+        self.assertFalse(game.is_lost())
         game.set_tile(1, 2, orig_tile)
-        self.assertEqual(True, game.is_lost())
+        self.assertTrue(game.is_lost())
         # Make 2 tiles on same column same number
-        orig_tile = game.get_tile(3, 4)
-        game.set_tile(3, 4, game.get_tile(4, 4))
-        self.assertEqual(False, game.is_lost())
+        orig_tile = game.get_tile(3, 2)
+        game.set_tile(3, 2, game.get_tile(4, 2))
+        self.assertFalse(game.is_lost())
         
 
 if __name__ == '__main__':
